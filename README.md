@@ -29,3 +29,39 @@ Set *My First Poq App* country_config.xml with versionCode 12.0 and this configu
  --------- | --- | ------- | ----------
 appId | 173 | 167 | 167 
 appIdentifier | ca315772-4803-4b48-ae99-5683133770e6 | fb61abc6-aa85-4a7f-b032-8c3d5cf31d29 | fb61abc6-aa85-4a7f-b032-8c3d5cf31d29
+
+**You should be able to run your completely functional app!
+
+## 3.- App styling
+
+We have [app styler](https://appmanager.poq.io/style) which is where all the styles are configured. App styler will provide a JSON and a zip file with resources.
+
+* For the JSON file, you will need to use our Android Studio plugin.
+* The zip file contains icons and fonts
+  * For the icons, you can use Resource Manager from Android Studio to import them;
+  * Resource Manager -> + -> import drawables -> select the folders android/iconand android/images;
+  * For the fonts, create a new resource folder called font and just drag and drop thefonts;
+  
+  For more information about how to obtain the JSON file and the Android Studio plugin visit [click here](https://docs.poqcommerce.com/guides/app-styler/publishing-your-changes.html)
+
+### Challenge
+Use this [JSON](https://drive.google.com/file/d/1PFyAPsNt__TM9m-WXbsdXhQ9LPf3GqhG/view?usp=sharing) and this [zip file](https://drive.google.com/file/d/1ziJzRXZd-XKS6tLAhp8hZ8nFa1J5k6ND/view?usp=sharing) to style *My First Poq App*
+
+## 4. app_config and feature flags
+
+We use *app_config.xml* files to set feature flags and configuration parameters. To override these settings in your app, you just need to create an XML property with the same name.
+
+### Challenge
+One of these parameters is *aspect_ratio_image_view* which by default is set to 1. This parameter configures the aspect ratio of the images in the app. Change this parameter in your app to adjust the aspect ratio of your images;
+
+## 5. Replace a layout
+
+If you need to modify how a part of your app looks like, you can override the layout and create your own. To replace a layout:
+* The layout has a layout alias:
+  * Create your new layout file avoiding the layout name from platform
+  * Override the layout alias xml property pointing to your new layout
+* The layout does not have a layout alias:
+  * Create your new layout file matching the layout name from platform
+  
+  ### Challenge
+  Modify the cart items to show a new message under the product title “Hello World!” and style your new text using app styling style *label_body*.
