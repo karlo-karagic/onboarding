@@ -6,16 +6,26 @@ This doc will guide you through your onboarding, helping you to create a new app
 To create a new app, we use [TemplateClient:](https://github.com/poqcommerce/Poq.Android.TemplateClient)
 * Download the repository
 * Edit the file [renameTemplateScript](https://github.com/poqcommerce/Poq.Android.TemplateClient/blob/dev/renameTemplateScript) in your local copy renaming the fields“NEW_NAME-*” for the name of your app with the correct format in each field
-* Execute the script
+* Execute the script; PS. If some error like this: *sed: RE error: illegal byte sequence*, just ignore. But to make sure that your script has been executed successfully, check the file *./app/build.gradle*, you should see the name that you use as 'new name' in your package configuration;
+
+Something like this:
+
+```gradle
+myfirstpoqapp = [
+            packageName    : "${basePackageName}.myfirstpoqapp",
+            versionName    : clientVersionName,
+            versionCode    : clientVersionCode
+    ]
+```
+
 * Create git and a new git tag for your current branch. Template client comespreconfigured to create the app release name using the closest git tag.
 
 **Before opening** your new project, you will need to add a user name and password to be able todownload the Poq platform as a Gradle dependency. To do so, visit the [development section](https://github.com/poqcommerce/Android-Developer-Playbook/blob/master/Tools/Development.md) in the android playbook and go to ***Gradle - Nexus User***.
 
 * Open your new project with Android Studio choosing the folder *Poq.Android.TemplateClient-dev/Poq.Android.{ClientName}*. You can rename theen closing folder from *Poq.Android.TemplateClient-dev* to your need.
-* Add your app icon as you would do for a regular app.
 
 ### Challenge 
-Create an app called *My First Poq App* using Template Client. You can use [this app icon](https://drive.google.com/file/d/1POfhAwLQ8ViLxlChTS15z1w3JXoouTLG/view?usp=sharing).
+Create an app called *My First Poq App* using Template Client.
 
 ## 2. Country config
 We use the file *country_config.json* to set up configuration per country. Template Client has 1country config per flavour. Each item in the json file defines 1 country configuration in the app.
