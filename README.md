@@ -32,7 +32,7 @@ appIdentifier | ca315772-4803-4b48-ae99-5683133770e6 | fb61abc6-aa85-4a7f-b032-8
 
 **You should be able to run your completely functional app!
 
-## 3.- App styling
+## 3. App styling
 We have [app styler](https://appmanager.poq.io/style) which is where all the styles are configured. App styler will provide a JSON and a zip file with resources.
 
 * For the JSON file, you will need to use our Android Studio plugin.
@@ -103,3 +103,110 @@ To replace no-singleton dependencies that are injected with Dagger you need to:
 * Create a new ActivityBuilder module that links the activity with your new module. To keep this maintainable, we create a file called BaseActivityBuilder that contains all thenon-modified Activity injections and another file called {NameOfTheClient}ActivityBuilderwhere are all the modified injection are;
 
 * In your application, in @PoqComponent(extraModules = [...]) remove, if you have it, platform ActivityBuilder and add your 2 new modules;
+
+## 6.3. Replace Koin dependency
+We start using Koin from v16, check your versions.gradle file and poqPlatformVersion to check that you are using the latest platform version: 
+
+### Dependency injection with Koin
+
+#### Scopes
+The scopes determine how many instances will be created. There are 3 main scopes:
+* *factory*: a new instance is created every time an object is requested.
+* *single*: only one instance is created within an application.
+* *viewModel*: only one instance is created within an activity/fragment. It replaces the viewModel scope from Koin allowing to provide interfaces that do not extend Android ViewModel component and implementations that extend PoqViewModel.
+
+To identify the scope of a dependency, visit the platform module where that definition is declared.
+
+#### How to customize dependencies
+In order to customize dependencies with Koin you will need to:
+
+* Create a Koin module
+```kotlin 
+val myModule = { ... } 
+```
+
+* Identify the dependency that you want to override and its scope. To override a dependency, add the parameter 
+```kotlin 
+override = true
+``` 
+to your dependency definition, and you should have something like this:
+
+```kotlin 
+val myModule = {
+    factory<InterfaceToOverride>(override = true) {
+        MyNewImplementation()
+    }
+}
+```
+
+* In your application that extends *CoreApplication*, in onCreate and after calling super, you need to load your new module:
+```kotlin
+class MyApplication : CoreApplication() {
+    override fun onCreate() {
+        super.onCreate()
+        loadKoinModule(myModule)
+    }
+}
+```
+
+### How to get platform instances
+When you need to get the platform instance for a definition to, for example, create a decorator pattern, you can use *getPoq()* method which will provide the platform instance.
+```kotlin
+factory<InterfaceToOverride>(override = true) {
+    MyNewImplementationWithDecorator(getPoq())
+}
+```
+### Named dependencies
+Some dependencies are named, which you will need to specify to override the dependency. All the names are defined and they are accessible in the same module file as where the dependencies are.
+```kotlin
+factory<InterfaceToOverride>(named(definitionName), override = true) {
+    MyNewImplementation()
+}
+```
+
+## 7. Navigation
+We use a navigator to navigate to all the different activities. If you need to modify the routes, you can extend *PoqNavigator* and override the appropriate method. You will also need to override the appropriate dependency to provide your own implementation.
+
+### Challenge
+Create a custom screen that displays a “Hello World!” message. Replace the scan barcode screen with your new screen.
+
+## 8. Modify app behaviour
+When you need to modify the behaviour of your app and replacing a layout is not enough, youcan replace the platform implementation using a decorator pattern:
+
+* Define a new interface that extends the platform interface to decorate
+* Define your extra methods in your new interface
+* Create a new class that implements your new interface
+* Inject to your new class the platform instance via the constructor
+* Use the Kotlin keyword *by*
+```kotlin
+interface CustomInterface: PlatformInterface {
+    fun extraMethod()
+}
+
+class MyCustomImplementation(
+    delegate: PlatformInterface
+): CustomInterface, PlatformInterface by delegate {
+
+    override fun extraMethod(){}
+}
+```
+### Challenge
+Customise Cart screen to display the current country name at the top of the screen using the decorator pattern with CartViewModel. You can use GetCurrentCountryConfig to obtain the current country configuration.
+
+## 9. Set up push notifications
+We support airship for push notification. To integrate push notifications with airship in your app:
+
+* Add a Gradle dependency to com.poqstudio:urbanairship
+```gradle
+implementation(​"com.poqstudio:urbanairship:​$poqSdkVersion​"​)
+```
+* Add the file airshipconfig.properties to your assets folder with the nextformat 
+
+```gradle
+productionAppKey=yourAirshipAppKey
+productionAppSecret=youtAishipAppSecret
+inProduction=true or false
+notificationIcon=ic_notification
+notificationColor=#00aa5b
+fcmSenderId=yourFCMSenderId
+```
