@@ -28,11 +28,11 @@ Thumbs.db
 
 # Android Studio
 *.iml
-Poq.Android.MyFirstPoqApp.gradle
+Poq.Android.MyFirstPoqApp/.gradle/*
 Poq.Android.MyFirstPoqApp/local.properties
 Poq.Android.MyFirstPoqApp/.idea/*
-Poq.Android.MyFirstPoqApp.DS_Store
+Poq.Android.MyFirstPoqApp/.DS_Store
 Poq.Android.MyFirstPoqApp/build
 Poq.Android.MyFirstPoqApp/captures
-Poq.Android.MyFirstPoqApp.externalNativeBuild
-Poq.Android.MyFirstPoqApp.cxx
+Poq.Android.MyFirstPoqApp/.externalNativeBuild
+Poq.Android.MyFirstPoqApp/.cxx
