@@ -28,12 +28,12 @@ myfirstpoqapp = [
 Create an app called *My First Poq App* using Template Client.
 
 ## 2. Country config
-We use the file *country_config.json* to set up configuration per country. Template Client has 1country config per flavour. Each item in the json file defines 1 country configuration in the app.
+We use the file *country_config.json* to set up configuration per country. Template Client has 1 country config per flavour. Each item in the json file defines 1 country configuration in the app.
 
 To identify the catalogue for the country we use appId and appIdentifer. [Mighty Bot](https://developer-uat.poq.io/) is an internal tool where you can change at runtime values. Android only use a smallnumber of MightyBot settings. To identify the version of MightyBot to use, we use versionCodeinside country config.
 
 ### Challenge
-Set *My First Poq App* country_config.xml with versionCode 12.0 and this configuration:
+Set *My First Poq App* country_config.json with versionCode 12.0 and this configuration:
 
   property | UAT | STAGING | PRODUCTION 
  --------- | --- | ------- | ----------
