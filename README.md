@@ -198,7 +198,7 @@ We support airship for push notification. To integrate push notifications with a
 
 * Add a Gradle dependency to com.poqstudio:urbanairship
 ```gradle
-implementation(​"com.poqstudio:urbanairship:​$poqSdkVersion​"​)
+implementation("com.poqstudio:urbanairship:$poqSdkVersion")
 ```
 * Add the file airshipconfig.properties to your assets folder with the nextformat 
 
@@ -210,3 +210,26 @@ notificationIcon=ic_notification
 notificationColor=#00aa5b
 fcmSenderId=yourFCMSenderId
 ```
+## 10. customData
+It is common to have personalized responses for each customer. For example: a field indicating a discount or promotion. The way this will be personalized will be defined with the back-end developer responsible for the project.
+
+However, one of the ways to do this is to use the *customData* field.
+
+This is a generic field that is already in the response structure of the platform and it can include almost any information about the product. So all you need to do is map and show it the way the customer needs.
+
+In both, PDP and PLP you should be receiving this structure in your customData.
+
+```JSON
+customData {
+    "isNew": "true"
+}
+```
+This field was previously included to do this exercise.
+
+## 10.1 customData on PDP
+### Chalange
+Customise the ProductDetail Screen to display the a View indicating that this product is new when the value of isNew=true;
+
+## 10.2 customData on PLP
+### Chalange
+Customise the ProductItem in the PLP list screen to display the a View indicating that this product is new when the value of isNew=true;
