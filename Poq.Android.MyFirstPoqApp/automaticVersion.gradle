@@ -1,0 +1,57 @@
+def getVersionCode() {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-list', '--count', 'HEAD'
+        standardOutput = stdout
+    }
+    Integer.parseInt(stdout.toString().trim())
+}
+
+def getCommitHashCode() {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    stdout.toString().trim()
+}
+
+def getVersionName() {
+    def branch = getBranchName()
+    if (branch.contains('dev') || branch.contains('release') || branch.contains('hotfix')|| branch.contains('PR')) {
+        "$poqPlatformVersion-$branch-${getCommitHashCode()}"
+    } else {
+        getGitDescribe()
+    }
+}
+static def getBranchName() {
+    def branchLine = System.getenv("BUILD_SOURCEBRANCH") ?: ""
+    if (branchLine.contains('dev')) {
+        "dev"
+    } else if (branchLine.contains('release')) {
+        "release"
+    } else if (branchLine.contains('hotfix')) {
+        "hotfix"
+    }else if (branchLine.contains('merge')) {
+        "PR"
+    } else {
+        "master"
+    }
+}
+def getGitDescribe() {
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'describe'
+            standardOutput = stdout
+        }
+        stdout.toString().trim()
+    } catch (ignored) {
+        "$poqPlatformVersion"
+    }
+}
+
+ext {
+    automaticVersionCode = getVersionCode()
+    automaticVersionName = getVersionName()
+}

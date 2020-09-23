@@ -1,0 +1,56 @@
+project.ext {
+    basePackageName = 'com.poqstudio.app.platform'
+}
+
+android {
+    compileSdkVersion platformCompileSdkVersion
+
+    defaultConfig {
+        applicationId project.ext.basePackageName
+        minSdkVersion platformMinSdkVersion
+        targetSdkVersion platformTargetSdkVersion
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility javaVersion
+        targetCompatibility javaVersion
+    }
+
+    dexOptions {
+        jumboMode = true
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro', '../proguard-rules.pro'
+            multiDexEnabled false
+        }
+        debug {
+            multiDexEnabled true
+        }
+    }
+
+    flavorDimensions "environment"
+
+    productFlavors.whenObjectAdded { flavor ->
+
+        def flavorData = project.ext[flavor.name]
+        flavor.applicationId flavorData.packageName
+        flavor.versionCode flavorData.versionCode
+        flavor.versionName flavorData.versionName
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+}

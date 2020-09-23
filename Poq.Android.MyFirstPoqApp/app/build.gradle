@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.appdistribution'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+ext.uiTestRunnerPath = 'com.poqstudio.app.client.test.runner.TestRunner'
+apply from: '../dagger.gradle'
+apply from: '../androidOptions.gradle'
+apply from: '../automaticVersion.gradle'
+
+project.ext {
+
+    basePackageName = 'com.poqstudio.app'
+
+    def clientVersionCode = automaticVersionCode
+    def clientVersionName = automaticVersionName
+
+    myfirstpoqapp = [
+            packageName    : "${basePackageName}.myfirstpoqapp",
+            versionName    : clientVersionName,
+            versionCode    : clientVersionCode
+    ]
+
+    myfirstpoqappdev = [
+            packageName    : "${basePackageName}.myfirstpoqappdev",
+            versionName    : clientVersionName,
+            versionCode    : clientVersionCode
+    ]
+
+    myfirstpoqappstaging = [
+            packageName    : "${basePackageName}.myfirstpoqappstaging",
+            versionName    : clientVersionName,
+            versionCode    : clientVersionCode
+    ]
+}
+
+android {
+
+    defaultConfig{
+        firebaseAppDistribution {
+            serviceCredentialsFile = "myfirst-poqapp-app-distribution-credentials.json"
+        }
+    }
+
+    signingConfigs {
+        myfirstpoqapprelease {
+            keyAlias 'myfirst-poqapp-release'
+            keyPassword 'leanP0q.'
+            storeFile file('../../Keystore/PoqAppKeystore.jks')
+            storePassword 'poq1poq'
+        }
+
+        myfirstpoqappdev {
+            keyAlias 'myfirst-poqapp-uat'
+            keyPassword 'leanP0q.'
+            storeFile file('../../Keystore/PoqAppKeystore.jks')
+            storePassword 'poq1poq'
+        }
+    }
+
+    productFlavors {
+        myfirstpoqapp {
+            signingConfig signingConfigs.myfirstpoqapprelease
+        }
+        myfirstpoqappdev {
+            signingConfig signingConfigs.myfirstpoqappdev
+        }
+        myfirstpoqappstaging {
+            signingConfig signingConfigs.myfirstpoqappdev
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "$javaVersion"
+    }
+
+}
+
+configurations {
+    myfirstpoqappReleaseImplementation {}
+    myfirstpoqappdevReleaseImplementation {}
+    myfirstpoqappstagingReleaseImplementation {}
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+    
+    implementation("com.poqstudio:platform:$poqPlatformVersion")
+    implementation("com.poqstudio:injection.annotations:$poqPlatformVersion")
+    kapt("com.poqstudio:injection.annotations.processor:$poqPlatformVersion")
+
+    debugImplementation "com.readystatesoftware.chuck:library:$chuckVersion"
+    myfirstpoqappdevReleaseImplementation "com.readystatesoftware.chuck:library:$chuckVersion"
+    myfirstpoqappstagingReleaseImplementation "com.readystatesoftware.chuck:library:$chuckVersion"
+    myfirstpoqappReleaseImplementation "com.readystatesoftware.chuck:library-no-op:$chuckVersion"
+}

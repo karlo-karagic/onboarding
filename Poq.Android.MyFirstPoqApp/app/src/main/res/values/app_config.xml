@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aspect_ratio_image_view">1.5</string>
+
+    <bool name="show_category_images">true</bool>
+    <bool name="circular_app_stories">true</bool>
+    <bool name="pdp_animation_enabled">true</bool>
+    <bool name="useNewCart">true</bool>
+    <bool name="useWebCheckoutBridge">true</bool>
+    <bool name="useNewWishlist">true</bool>
+    <bool name="brand_enabled">true</bool>
+    <bool name="isPriceInSizeSelectorEnabled">true</bool>
+    <bool name="isLowInStockInSizeSelectorEnabled">true</bool>
+    <bool name="useNewProductDetail">true</bool>
+    <bool name="usePoqDemoProductDetailTemplate">false</bool>
+    <bool name="usePredictiveSearchV2">true</bool>
+    <bool name="useNewOnboarding">true</bool>
+</resources>

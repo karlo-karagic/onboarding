@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1091234876876",
+    "firebase_url": "https://myfirst-poqapp-54880.firebaseio.com",
+    "project_id": "myfirst-poqapp-54880",
+    "storage_bucket": "myfirst-poqapp-54880.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091234876876:android:1f7bb17358936ffdb72169",
+        "android_client_info": {
+          "package_name": "com.poqstudio.app.myfirstpoqapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091234876876-dv0i85c6npckigemtk5sl14vgjdhrhor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHkk5kEewMHyVxgWFLFqgcXRaJC_1UCm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091234876876-dv0i85c6npckigemtk5sl14vgjdhrhor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091234876876:android:99d61eb09333030fb72169",
+        "android_client_info": {
+          "package_name": "com.poqstudio.app.myfirstpoqappdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091234876876-dv0i85c6npckigemtk5sl14vgjdhrhor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHkk5kEewMHyVxgWFLFqgcXRaJC_1UCm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091234876876-dv0i85c6npckigemtk5sl14vgjdhrhor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091234876876:android:986bfff2f1a947b0b72169",
+        "android_client_info": {
+          "package_name": "com.poqstudio.app.myfirstpoqappstaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091234876876-dv0i85c6npckigemtk5sl14vgjdhrhor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHkk5kEewMHyVxgWFLFqgcXRaJC_1UCm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091234876876-dv0i85c6npckigemtk5sl14vgjdhrhor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

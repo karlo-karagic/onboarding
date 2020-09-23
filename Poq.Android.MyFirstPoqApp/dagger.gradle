@@ -1,0 +1,10 @@
+dependencies {
+    api 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation "androidx.media:media:$androidxVersion"
+    api "com.google.dagger:dagger-android:$daggerVersion"
+    api "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    // dagger-android-support includes this with a different version, override with our own to avoid conflicts
+    implementation "androidx.appcompat:appcompat:$androidxVersion"
+} 
