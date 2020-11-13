@@ -17,36 +17,37 @@ project.ext {
     def clientVersionName = automaticVersionName
 
     myfirstpoqapp = [
-            packageName    : "${basePackageName}.myfirstpoqapp",
-            versionName    : clientVersionName,
-            versionCode    : clientVersionCode
+            packageName: "${basePackageName}.myfirstpoqapp",
+            versionName: clientVersionName,
+            versionCode: clientVersionCode
     ]
 
     myfirstpoqappdev = [
-            packageName    : "${basePackageName}.myfirstpoqappdev",
-            versionName    : clientVersionName,
-            versionCode    : clientVersionCode
+            packageName: "${basePackageName}.myfirstpoqappdev",
+            versionName: clientVersionName,
+            versionCode: clientVersionCode
     ]
 
     myfirstpoqappstaging = [
-            packageName    : "${basePackageName}.myfirstpoqappstaging",
-            versionName    : clientVersionName,
-            versionCode    : clientVersionCode
+            packageName: "${basePackageName}.myfirstpoqappstaging",
+            versionName: clientVersionName,
+            versionCode: clientVersionCode
     ]
 }
 
 android {
 
-    defaultConfig{
+    defaultConfig {
         firebaseAppDistribution {
             serviceCredentialsFile = "myfirst-poqapp-app-distribution-credentials.json"
+            groups = "poq"
         }
     }
 
     signingConfigs {
         myfirstpoqapprelease {
             keyAlias 'myfirst-poqapp-release'
-            keyPassword 'leanP0q.'
+            keyPassword getKeyAliasPassword()
             storeFile file('../../Keystore/PoqAppKeystore.jks')
             storePassword 'poq1poq'
         }
@@ -74,7 +75,14 @@ android {
     kotlinOptions {
         jvmTarget = "$javaVersion"
     }
+}
 
+def getKeyAliasPassword() {
+    if (hasProperty('KEY_ALIAS_PASSWORD')) {
+        return KEY_ALIAS_PASSWORD
+    } else {
+        return ""
+    }
 }
 
 configurations {
@@ -84,11 +92,8 @@ configurations {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
-    
-    implementation("com.poqstudio:platform:$poqPlatformVersion")
-    implementation("com.poqstudio:injection.annotations:$poqPlatformVersion")
-    kapt("com.poqstudio:injection.annotations.processor:$poqPlatformVersion")
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+    implementation "com.poqstudio:platform:$poqPlatformVersion"
 
     debugImplementation "com.readystatesoftware.chuck:library:$chuckVersion"
     myfirstpoqappdevReleaseImplementation "com.readystatesoftware.chuck:library:$chuckVersion"
