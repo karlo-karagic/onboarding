@@ -12,6 +12,7 @@
     <bool name="isPriceInSizeSelectorEnabled">true</bool>
     <bool name="isLowInStockInSizeSelectorEnabled">true</bool>
     <bool name="useNewProductDetail">true</bool>
+    <bool name="useNewProductListAndNewCategories">true</bool>
     <bool name="usePoqDemoProductDetailTemplate">false</bool>
     <bool name="usePredictiveSearchV2">true</bool>
     <bool name="useNewOnboarding">true</bool>
