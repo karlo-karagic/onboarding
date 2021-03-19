@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_badge_normal" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_badge_normal">#FFFFFFFF</color>
+    <style name="label_badge_normal" parent="font_style_label_badge_normal">
+        <item name="android:textColor">@color/color_label_badge_normal</item>
+    </style>
+    <color name="color_badge_normal">#FF2D2525</color>
+    <style name="badge_normal">
+        <item name="android:textAppearance">@style/label_badge_normal</item>
+    </style>
+</resources>

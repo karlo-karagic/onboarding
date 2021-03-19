@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_price_discounted" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <color name="color_label_price_discounted">#FF2D2525</color>
+    <style name="label_price_discounted" parent="font_style_label_price_discounted">
+        <item name="android:textColor">@color/color_label_price_discounted</item>
+    </style>
+    <style name="price_discounted">
+        <item name="android:textAppearance">@style/label_price_discounted</item>
+    </style>
+    <style name="font_style_label_price_normal" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <color name="color_label_price_normal">#FF080808</color>
+    <style name="label_price_normal" parent="font_style_label_price_normal">
+        <item name="android:textColor">@color/color_label_price_normal</item>
+    </style>
+    <style name="price_normal">
+        <item name="android:textAppearance">@style/label_price_normal</item>
+    </style>
+    <style name="font_style_label_price_previous" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <color name="color_label_price_previous">#FF827F7F</color>
+    <style name="label_price_previous" parent="font_style_label_price_previous">
+        <item name="android:textColor">@color/color_label_price_previous</item>
+    </style>
+    <style name="price_previous">
+        <item name="android:textAppearance">@style/label_price_previous</item>
+        <item name="decoration">strikethrough</item>
+    </style>
+</resources>

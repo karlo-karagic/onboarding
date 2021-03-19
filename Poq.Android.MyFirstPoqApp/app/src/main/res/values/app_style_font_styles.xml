@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_body" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <style name="font_style_callout" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <style name="font_style_caption1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <style name="font_style_caption2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <style name="font_style_footnote" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <style name="font_style_headline" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_SemiBold</item>
+    </style>
+    <style name="font_style_largeTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">34sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <style name="font_style_subhead" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <style name="font_style_title1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <style name="font_style_title2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <style name="font_style_title3" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+</resources>

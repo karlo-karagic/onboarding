@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <color name="color_pager_indicator_normal">#FFD1D0D6</color>
+    <color name="color_selected_pager_indicator_normal">#FF2D2525</color>
+    <style name="pager_indicator_normal">
+        <item name="fillColor">@color/color_selected_pager_indicator_normal</item>
+        <item name="pageColor">@color/color_pager_indicator_normal</item>
+    </style>
+</resources>

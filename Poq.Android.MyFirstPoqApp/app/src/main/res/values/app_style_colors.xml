@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <color name="color_dark_base">#FF8F8E94</color>
+    <color name="color_dark_darker">#FF080808</color>
+    <color name="color_dark_lighter">#FFAFAEB3</color>
+    <color name="color_error_base">#FFF00000</color>
+    <color name="color_error_darker">#FF982626</color>
+    <color name="color_error_lighter">#FFEB7575</color>
+    <color name="color_info_base">#FF2782D2</color>
+    <color name="color_info_darker">#FF3C6F9C</color>
+    <color name="color_info_lighter">#FF9DC9EF</color>
+    <color name="color_light_base">#FFF2F1F7</color>
+    <color name="color_light_darker">#FFD1D0D6</color>
+    <color name="color_light_lighter">#FFFFFFFF</color>
+    <color name="color_primary_base">#FF2D2525</color>
+    <color name="color_primary_darker">#FF4E4040</color>
+    <color name="color_primary_lighter">#FF9C9494</color>
+    <color name="color_secondary_base">#FF927E63</color>
+    <color name="color_secondary_darker">#FF9A8A75</color>
+    <color name="color_secondary_lighter">#FFEDE4D6</color>
+    <color name="color_success_base">#FF22B89F</color>
+    <color name="color_success_darker">#FF368D7E</color>
+    <color name="color_success_lighter">#FF93E0D3</color>
+    <color name="color_systemClear_base">#00FFFFFF</color>
+    <color name="color_systemClear_darker">#FFD2D2D2</color>
+    <color name="color_systemClear_lighter">#FFFFFFFF</color>
+    <color name="color_systemRed_base">#FFEB1212</color>
+    <color name="color_systemRed_darker">#FF9E2D2D</color>
+    <color name="color_systemRed_lighter">#FFF18A8A</color>
+    <color name="color_warning_base">#FFF08C07</color>
+    <color name="color_warning_darker">#FF9B6A29</color>
+    <color name="color_warning_lighter">#FFEEBE7E</color>
+    <color name="color_onDark">#FFFFFFFF</color>
+    <color name="color_onError">#FFFFFFFF</color>
+    <color name="color_onInfo">#FFFFFFFF</color>
+    <color name="color_onLight">#FF080808</color>
+    <color name="color_onPrimary">#FFFFFFFF</color>
+    <color name="color_onSecondary">#FF080808</color>
+    <color name="color_onSuccess">#FFFFFFFF</color>
+    <color name="color_onWarning">#FFFFFFFF</color>
+</resources>

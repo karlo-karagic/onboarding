@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <font name="font_family_body_bold">@font/GillSansNova_SemiBold</font>
+    <font name="font_family_body_regular">@font/GillSansNova_Book</font>
+    <font name="font_family_body_semibold">@font/GillSansNova_Medium</font>
+    <font name="font_family_header_bold">@font/GillSansNova_SemiBold</font>
+    <font name="font_family_header_regular">@font/GillSansNova_Medium</font>
+    <font name="font_family_header_semibold">@font/GillSansNova_SemiBold</font>
+    <font name="font_family_pricing_bold">@font/GillSansNova_Medium</font>
+    <font name="font_family_pricing_regular">@font/GillSansNova_Medium</font>
+    <font name="font_family_pricing_semibold">@font/GillSansNova_Medium</font>
+</resources>

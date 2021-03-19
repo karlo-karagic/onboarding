@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <font name="GillSansNova_Book">@font/font_0ff23f40b69349eab07fb008a76def49</font>
+    <font name="GillSansNova_Medium">@font/font_e51f6cce265a43729ec4072a0d1e4023</font>
+    <font name="GillSansNova_SemiBold">@font/font_0a36649fb7384ff49b45451080ae0f81</font>
+</resources>

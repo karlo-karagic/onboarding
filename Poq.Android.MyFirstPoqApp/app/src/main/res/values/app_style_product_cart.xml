@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_title_product_cart" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_SemiBold</item>
+    </style>
+    <color name="color_label_title_product_cart">#FF080808</color>
+    <style name="label_title_product_cart" parent="font_style_label_title_product_cart">
+        <item name="android:textColor">@color/color_label_title_product_cart</item>
+    </style>
+    <style name="font_style_label_detail_product_cart" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_detail_product_cart">#FF080808</color>
+    <style name="label_detail_product_cart" parent="font_style_label_detail_product_cart">
+        <item name="android:textColor">@color/color_label_detail_product_cart</item>
+    </style>
+    <style name="font_style_label_status_product_cart" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_status_product_cart">#FFF00000</color>
+    <style name="label_status_product_cart" parent="font_style_label_status_product_cart">
+        <item name="android:textColor">@color/color_label_status_product_cart</item>
+    </style>
+    <color name="color_background_product_cart">#FFFFFFFF</color>
+    <style name="font_style_label_price_product_cart" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <color name="color_label_price_product_cart">#FF080808</color>
+    <style name="label_price_product_cart" parent="font_style_label_price_product_cart">
+        <item name="android:textColor">@color/color_label_price_product_cart</item>
+    </style>
+    <style name="price_product_cart">
+        <item name="android:textAppearance">@style/label_price_product_cart</item>
+    </style>
+</resources>

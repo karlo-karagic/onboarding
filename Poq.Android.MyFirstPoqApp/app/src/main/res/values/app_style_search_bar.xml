@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_search_bar" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_search_bar">#FF080808</color>
+    <style name="label_search_bar" parent="font_style_label_search_bar">
+        <item name="android:textColor">@color/color_label_search_bar</item>
+    </style>
+    <style name="search_bar">
+        <item name="android:textAppearance">@style/label_search_bar</item>
+    </style>
+</resources>

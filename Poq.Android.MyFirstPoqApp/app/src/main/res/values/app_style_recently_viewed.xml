@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_title_recently_viewed" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_SemiBold</item>
+    </style>
+    <color name="color_label_title_recently_viewed">#FF080808</color>
+    <style name="label_title_recently_viewed" parent="font_style_label_title_recently_viewed">
+        <item name="android:textColor">@color/color_label_title_recently_viewed</item>
+    </style>
+    <color name="color_background_recently_viewed">#FFFFFFFF</color>
+</resources>

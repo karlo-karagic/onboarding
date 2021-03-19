@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_title_product_wishlist" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_title_product_wishlist">#FF080808</color>
+    <style name="label_title_product_wishlist" parent="font_style_label_title_product_wishlist">
+        <item name="android:textColor">@color/color_label_title_product_wishlist</item>
+    </style>
+    <color name="color_background_product_wishlist">#FFFFFFFF</color>
+    <style name="font_style_label_price_product_wishlist" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Medium</item>
+    </style>
+    <color name="color_label_price_product_wishlist">#FF080808</color>
+    <style name="label_price_product_wishlist" parent="font_style_label_price_product_wishlist">
+        <item name="android:textColor">@color/color_label_price_product_wishlist</item>
+    </style>
+    <style name="price_product_wishlist">
+        <item name="android:textAppearance">@style/label_price_product_wishlist</item>
+    </style>
+</resources>

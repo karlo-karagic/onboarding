@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <color name="color_bottom_bar">#FFFFFFFF</color>
+    <style name="font_style_label_bottom_bar" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_bottom_bar">#FF080808</color>
+    <style name="label_bottom_bar" parent="font_style_label_bottom_bar">
+        <item name="android:textColor">@color/color_label_bottom_bar</item>
+    </style>
+    <style name="font_style_label_selected_bottom_bar" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_selected_bottom_bar">#FF927E63</color>
+    <style name="label_selected_bottom_bar" parent="font_style_label_selected_bottom_bar">
+        <item name="android:textColor">@color/color_label_selected_bottom_bar</item>
+    </style>
+    <style name="bottom_bar">
+        <item name="android:background">@color/color_bottom_bar</item>
+        <item name="itemIconTint">@color/app_style_bottom_bar_tint_color</item>
+        <item name="itemTextAppearanceActive">@style/label_selected_bottom_bar</item>
+        <item name="itemTextAppearanceInactive">@style/label_bottom_bar</item>
+    </style>
+</resources>

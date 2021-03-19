@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_button_icon" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_button_icon">#FF2D2525</color>
+    <style name="label_button_icon" parent="font_style_label_button_icon">
+        <item name="android:textColor">@color/color_label_button_icon</item>
+    </style>
+    <style name="button_icon_theme" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/app_style_button_icon_text_color</item>
+    </style>
+    <style name="button_icon" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/label_button_icon</item>
+        <item name="android:theme">@style/button_icon_theme</item>
+    </style>
+    <style name="font_style_label_button_primary" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_SemiBold</item>
+    </style>
+    <color name="color_label_button_primary">#FFFFFFFF</color>
+    <style name="label_button_primary" parent="font_style_label_button_primary">
+        <item name="android:textColor">@color/color_label_button_primary</item>
+    </style>
+    <style name="button_primary_theme" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/app_style_button_primary_tint_color</item>
+        <item name="android:textColor">@color/app_style_button_primary_text_color</item>
+    </style>
+    <style name="button_primary" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textAppearance">@style/label_button_primary</item>
+        <item name="android:theme">@style/button_primary_theme</item>
+    </style>
+    <style name="font_style_label_button_secondary" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_SemiBold</item>
+    </style>
+    <color name="color_label_button_secondary">#FFFFFFFF</color>
+    <style name="label_button_secondary" parent="font_style_label_button_secondary">
+        <item name="android:textColor">@color/color_label_button_secondary</item>
+    </style>
+    <style name="button_secondary_theme" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/app_style_button_secondary_tint_color</item>
+        <item name="android:textColor">@color/app_style_button_secondary_text_color</item>
+    </style>
+    <style name="button_secondary" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textAppearance">@style/label_button_secondary</item>
+        <item name="android:theme">@style/button_secondary_theme</item>
+    </style>
+    <style name="font_style_label_button_tertiary" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_SemiBold</item>
+    </style>
+    <color name="color_label_button_tertiary">#FF2D2525</color>
+    <style name="label_button_tertiary" parent="font_style_label_button_tertiary">
+        <item name="android:textColor">@color/color_label_button_tertiary</item>
+    </style>
+    <style name="button_tertiary_theme" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/app_style_button_tertiary_text_color</item>
+    </style>
+    <style name="button_tertiary" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/label_button_tertiary</item>
+        <item name="android:theme">@style/button_tertiary_theme</item>
+    </style>
+</resources>

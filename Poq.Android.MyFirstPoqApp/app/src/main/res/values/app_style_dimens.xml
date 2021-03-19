@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <dimen name="dimen_base">8dp</dimen>
+    <dimen name="dimen_double">16dp</dimen>
+    <dimen name="dimen_eighth">1dp</dimen>
+    <dimen name="dimen_half">4dp</dimen>
+    <dimen name="dimen_nonuple">72dp</dimen>
+    <dimen name="dimen_octuple">64dp</dimen>
+    <dimen name="dimen_quadruple">32dp</dimen>
+    <dimen name="dimen_quarter">2dp</dimen>
+    <dimen name="dimen_quintuple">40dp</dimen>
+    <dimen name="dimen_septuple">56dp</dimen>
+    <dimen name="dimen_sextuple">48dp</dimen>
+    <dimen name="dimen_sixteenth">0dp</dimen>
+    <dimen name="dimen_triple">24dp</dimen>
+</resources>

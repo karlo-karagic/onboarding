@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <style name="font_style_label_promo_bar_primary" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_promo_bar_primary">#FF2D2525</color>
+    <style name="label_promo_bar_primary" parent="font_style_label_promo_bar_primary">
+        <item name="android:textColor">@color/color_label_promo_bar_primary</item>
+    </style>
+    <color name="color_promo_bar_primary">#FFFFFFFF</color>
+    <style name="promo_bar_primary">
+        <item name="android:background">@color/color_promo_bar_primary</item>
+        <item name="android:textAppearance">@style/label_promo_bar_primary</item>
+    </style>
+    <style name="font_style_label_promo_bar_secondary" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/GillSansNova_Book</item>
+    </style>
+    <color name="color_label_promo_bar_secondary">#FF080808</color>
+    <style name="label_promo_bar_secondary" parent="font_style_label_promo_bar_secondary">
+        <item name="android:textColor">@color/color_label_promo_bar_secondary</item>
+    </style>
+    <color name="color_promo_bar_secondary">#FFFFFFFF</color>
+    <style name="promo_bar_secondary">
+        <item name="android:background">@color/color_promo_bar_secondary</item>
+        <item name="android:textAppearance">@style/label_promo_bar_secondary</item>
+    </style>
+</resources>
